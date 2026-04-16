@@ -1,107 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Titus | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Source Code Pro', monospace;
+      background: #0a0a12;
+      color: #c084fc;
+    }
+
+    header {
+      padding: 40px;
+      border-bottom: 1px solid #4b0082;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #d8b4fe;
+    }
+
+    section {
+      padding: 30px 40px;
+      border-bottom: 1px solid #1f1f3a;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #a855f7;
+    }
+
+    .prompt {
+      color: #9333ea;
+    }
+
+    .card {
+      background: #111122;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 3px solid #7e22ce;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      background: #151530;
+      box-shadow: 0 0 10px #7e22ce;
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+      color: #ddd;
+    }
+
+    a {
+      color: #a855f7;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>titus@portfolio:~$</h1>
+</header>
+
+<section>
+  <h2>> about_me</h2>
+  <p>
+    <span class="prompt">$</span> whoami<br><br>
+    I'm Titus — focused on cybersecurity, systems, and building practical tools.
+  </p>
+</section>
+
 <section>
   <h2>> portfolio</h2>
 
-  <!-- MD5 Cracker -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> md5_hash_cracker.py</div>
     <div class="content">
-      <p>
-        Built a clean and user-friendly MD5 hash cracker in Python.
-        The tool takes hashed input and attempts to recover the original value
-        using dictionary-based techniques.
-      </p>
-
-      <p>
-        Focus was on usability, performance, and making the interface simple while
-        still demonstrating how hash cracking works in practice.
-      </p>
-
-      <p>
-        MD5 produces a fixed 128-bit hash and is no longer secure due to collisions,
-        which makes it a good learning target for cracking techniques  [oai_citation:0‡Wikipedia](https://en.wikipedia.org/wiki/MD5?utm_source=chatgpt.com).
-      </p>
-
-      <p>
-        <a href="https://medium.com/@titus06/building-a-clean-user-friendly-md5-hash-cracker-in-python-ba0a2ec7331f" target="_blank">
-          Read Full Breakdown →
-        </a>
-      </p>
+      <p>Built a clean and user-friendly MD5 hash cracker in Python.</p>
+      <p>Focus on usability + real-world cracking concepts.</p>
+      <p><a href="https://medium.com/@titus06/building-a-clean-user-friendly-md5-hash-cracker-in-python-ba0a2ec7331f" target="_blank">Read Breakdown →</a></p>
     </div>
   </div>
 
-  <!-- Firewall -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> ubuntu_firewall_setup.sh</div>
     <div class="content">
-      <p>
-        Configured and secured a Linux system using a firewall on Ubuntu.
-        This project demonstrates practical network defense and system hardening.
-      </p>
-
-      <p>
-        Covers rule configuration, traffic filtering, and protecting services from
-        unauthorized access.
-      </p>
-
-      <p>
-        Focused on real-world defensive security rather than theory.
-      </p>
-
-      <p>
-        <a href="https://medium.com/@titus06/how-to-set-up-a-firewall-on-ubuntu-and-secure-your-network-943b8dae0e6a" target="_blank">
-          Read Full Breakdown →
-        </a>
-      </p>
+      <p>Configured firewall rules on Ubuntu for system security.</p>
+      <p>Demonstrates real defensive security practices.</p>
+      <p><a href="https://medium.com/@titus06/how-to-set-up-a-firewall-on-ubuntu-and-secure-your-network-943b8dae0e6a" target="_blank">Read Breakdown →</a></p>
     </div>
   </div>
 
-  <!-- Port Scanner -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> port_scanner_nmap.py</div>
     <div class="content">
-      <p>
-        Built a Python-based port scanner using Nmap to identify open ports and services.
-      </p>
-
-      <p>
-        Demonstrates how attackers and defenders enumerate systems and understand
-        network exposure.
-      </p>
-
-      <p>
-        Focused on automation and integrating Python with security tools.
-      </p>
-
-      <p>
-        <a href="https://medium.com/@titus06/simple-python-based-port-scanner-with-nmap-aafc7ee5ded3" target="_blank">
-          Read Full Breakdown →
-        </a>
-      </p>
+      <p>Python-based port scanner using Nmap.</p>
+      <p>Shows enumeration techniques used in security.</p>
+      <p><a href="https://medium.com/@titus06/simple-python-based-port-scanner-with-nmap-aafc7ee5ded3" target="_blank">Read Breakdown →</a></p>
     </div>
   </div>
 
-  <!-- AI Cybersecurity -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> ai_cybersecurity_analysis.md</div>
     <div class="content">
-      <p>
-        Explored the cognitive load of AI in cybersecurity from a blue team perspective.
-      </p>
-
-      <p>
-        Analyzed how AI tools impact decision-making, analyst fatigue, and operational workflows.
-      </p>
-
-      <p>
-        Focused on the human + AI interaction rather than just technical capability.
-      </p>
-
-      <p>
-        <a href="https://medium.com/@titus06/the-cognitive-load-of-ai-in-cybersecurity-a-blue-team-view-b323535b695f" target="_blank">
-          Read Full Breakdown →
-        </a>
-      </p>
+      <p>Analysis of AI’s impact on cybersecurity workflows.</p>
+      <p>Focus on cognitive load and blue team perspective.</p>
+      <p><a href="https://medium.com/@titus06/the-cognitive-load-of-ai-in-cybersecurity-a-blue-team-view-b323535b695f" target="_blank">Read Breakdown →</a></p>
     </div>
   </div>
 
 </section>
+
+<footer>
+  titus@portfolio:~$ exit
+</footer>
+
+<script>
+  function toggle(el) {
+    const content = el.querySelector(".content");
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 50) {
+        sec.classList.add("visible");
+      }
+    });
+  });
+
+  // Trigger initial animation
+  window.dispatchEvent(new Event('scroll'));
+</script>
+
+</body>
+</html>
