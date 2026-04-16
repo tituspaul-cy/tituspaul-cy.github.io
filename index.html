@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Titus Paul | Portfolio</title>
+  <title>Titus | Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
@@ -25,11 +25,13 @@
     }
 
     section {
-      padding: 30px 40px;
+      padding: 40px;
       border-bottom: 1px solid #1f1f3a;
       opacity: 0;
       transform: translateY(20px);
       transition: 0.6s ease;
+      max-width: 900px;
+      margin: auto;
     }
 
     section.visible {
@@ -39,10 +41,29 @@
 
     h2 {
       color: #a855f7;
+      margin-bottom: 20px;
     }
 
     .prompt {
       color: #9333ea;
+    }
+
+    .terminal-line {
+      margin: 12px 0;
+      line-height: 1.6;
+    }
+
+    .section-block {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin: 6px 0;
     }
 
     .card {
@@ -84,54 +105,65 @@
   <h1>titus@portfolio:~$</h1>
 </header>
 
+<!-- ABOUT -->
 <section>
   <h2>> about_me</h2>
-  <p>
-    <span class="prompt">$</span> whoami<br><br>
-    I'm Titus — focused on cybersecurity and networking.
-  </p>
+
+  <div class="terminal-line">
+    <span class="prompt">$</span> whoami
+  </div>
+
+  <div class="terminal-line">
+    I'm Titus — focused on cybersecurity, networking, and building practical tools.
+  </div>
 </section>
 
-<div class="section-block">
-  <div class="terminal-line">
-    <span class="prompt">$</span> experience --timeline
+<!-- EXPERIENCE -->
+<section>
+  <h2>> experience</h2>
+
+  <div class="section-block">
+    <div class="terminal-line">
+      <span class="prompt">$</span> experience --timeline
+    </div>
+
+    <div class="terminal-line">
+      At 16, I began my IT journey with an 8-month placement at Sheffield City Trust.
+    </div>
+
+    <ul>
+      <li>Repairing Ethernet cables and resolving network port issues</li>
+      <li>Managing users and devices using Active Directory and Microsoft Intune</li>
+      <li>Conducting hardware audits and remote troubleshooting via Splashtop</li>
+    </ul>
+
+    <div class="terminal-line">
+      I then moved to West Suffolk Council for a 6-month placement:
+    </div>
+
+    <ul>
+      <li>Hardware repairs (charger ports, screen replacements)</li>
+      <li>Provisioning new user accounts and onboarding setups</li>
+    </ul>
+
+    <div class="terminal-line">
+      I was later offered an IT Apprentice role at BUUK:
+    </div>
+
+    <ul>
+      <li>Incident response (compromised accounts, password resets)</li>
+      <li>Asset management and device lifecycle handling</li>
+      <li>Providing end-user support (remote and on-site)</li>
+      <li>Working within ITIL-based service processes</li>
+    </ul>
+
+    <div class="terminal-line">
+      Focused on building practical, real-world experience across systems, networks, and security.
+    </div>
   </div>
+</section>
 
-  <div class="terminal-line">
-    At 16, I began my IT journey with an 8-month placement at Sheffield City Trust.
-  </div>
-
-  <ul>
-    <li>Repairing Ethernet cables and resolving network port issues</li>
-    <li>Managing users and devices using Active Directory and Microsoft Intune</li>
-    <li>Conducting hardware audits and remote troubleshooting via Splashtop</li>
-  </ul>
-
-  <div class="terminal-line">
-    I then moved to West Suffolk Council for a 6-month placement:
-  </div>
-
-  <ul>
-    <li>Hardware repairs (charger ports, screen replacements)</li>
-    <li>Provisioning new user accounts and onboarding setups</li>
-  </ul>
-
-  <div class="terminal-line">
-    I was later offered an IT Apprentice role at BUUK:
-  </div>
-
-  <ul>
-    <li>Incident response (compromised accounts, password resets)</li>
-    <li>Asset management and device lifecycle handling</li>
-    <li>Providing end-user support (remote and on-site)</li>
-    <li>Working within ITIL-based service processes</li>
-  </ul>
-
-  <div class="terminal-line">
-    Focused on building practical, real-world experience across systems, networks, and security.
-  </div>
-</div>
-  
+<!-- PROJECTS -->
 <section>
   <h2>> projects</h2>
 
@@ -194,9 +226,11 @@
     });
   });
 
-  // Trigger initial animation
   window.dispatchEvent(new Event('scroll'));
 </script>
 
 </body>
 </html>
+
+
+
