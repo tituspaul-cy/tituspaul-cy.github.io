@@ -2,60 +2,68 @@
 <html>
 <head>
   <title>Titus | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b1a;
-      color: #e0e0ff;
-    }
-
-    header {
-      background: linear-gradient(90deg, #1a0033, #4b0082);
-      padding: 40px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3em;
+      font-family: 'Source Code Pro', monospace;
+      background: #0a0a12;
       color: #c084fc;
     }
 
-    header p {
-      opacity: 0.8;
+    header {
+      padding: 40px;
+      border-bottom: 1px solid #4b0082;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #d8b4fe;
+    }
+
+    .subtitle {
+      opacity: 0.7;
+      margin-top: 10px;
     }
 
     section {
-      padding: 50px;
-      max-width: 900px;
-      margin: auto;
+      padding: 30px 40px;
+      border-bottom: 1px solid #1f1f3a;
     }
 
     h2 {
       color: #a855f7;
-      border-bottom: 2px solid #4b0082;
-      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .terminal-line {
+      margin: 8px 0;
+    }
+
+    .prompt {
+      color: #9333ea;
     }
 
     .card {
-      background: #11112b;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+      background: #111122;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 3px solid #7e22ce;
     }
 
     .card:hover {
-      transform: scale(1.02);
-      transition: 0.3s;
+      background: #151530;
+      transition: 0.2s;
     }
 
     footer {
-      text-align: center;
       padding: 20px;
-      background: #1a0033;
-      color: #aaa;
+      text-align: center;
+      color: #777;
     }
   </style>
 </head>
@@ -63,50 +71,65 @@
 <body>
 
 <header>
-  <h1>🚀 Titus</h1>
-  <p>Cybersecurity Enthusiast | Developer | Builder</p>
+  <h1>titus@portfolio:~$</h1>
+  <div class="subtitle">Cybersecurity • Development • Systems</div>
 </header>
 
 <section>
-  <h2>👤 About Me</h2>
-  <p>
-    I'm Titus, passionate about technology, cybersecurity, and building cool things.
-    I enjoy working with systems, networks, and exploring how things work under the hood.
-  </p>
+  <h2>> about_me</h2>
+
+  <div class="terminal-line">
+    <span class="prompt">$</span> whoami
+  </div>
+
+  <div class="terminal-line">
+    I'm Titus — interested in cybersecurity, systems, and building things that actually work.
+  </div>
+
+  <div class="terminal-line">
+    <span class="prompt">$</span> interests
+  </div>
+
+  <div class="terminal-line">
+    networks • security • low-level systems • web
+  </div>
 </section>
 
 <section>
-  <h2>💼 Portfolio</h2>
+  <h2>> portfolio</h2>
 
   <div class="card">
-    <h3>Project 1</h3>
-    <p>Describe your project here (e.g. network scanner, website, app).</p>
+    <div class="terminal-line">
+      <span class="prompt">$</span> project_1
+    </div>
+    <div>Describe your project (e.g. network scanner, tool, website)</div>
   </div>
 
   <div class="card">
-    <h3>Project 2</h3>
-    <p>Another project you’ve built.</p>
+    <div class="terminal-line">
+      <span class="prompt">$</span> project_2
+    </div>
+    <div>Another project here</div>
   </div>
 
 </section>
 
 <section>
-  <h2>🏆 Achievements</h2>
+  <h2>> achievements</h2>
 
-  <div class="card">
-    <p>✔ Completed XYZ certification</p>
+  <div class="terminal-line">
+    <span class="prompt">$</span> achievements --list
   </div>
 
-  <div class="card">
-    <p>✔ Built and deployed my own website</p>
-  </div>
+  <div class="terminal-line">✔ Built and deployed my own website</div>
+  <div class="terminal-line">✔ Add your certifications here</div>
+  <div class="terminal-line">✔ Any competitions / projects</div>
 
 </section>
 
 <footer>
-  <p>© 2026 Titus</p>
+  <div>titus@portfolio:~$ exit</div>
 </footer>
 
 </body>
 </html>
-
