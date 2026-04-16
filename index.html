@@ -1,236 +1,89 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Titus | Portfolio</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Source Code Pro', monospace;
-      background: #0a0a12;
-      color: #c084fc;
-    }
-
-    header {
-      padding: 40px;
-      border-bottom: 1px solid #4b0082;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #d8b4fe;
-    }
-
-    section {
-      padding: 40px;
-      border-bottom: 1px solid #1f1f3a;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: 0.6s ease;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      color: #a855f7;
-      margin-bottom: 20px;
-    }
-
-    .prompt {
-      color: #9333ea;
-    }
-
-    .terminal-line {
-      margin: 12px 0;
-      line-height: 1.6;
-    }
-
-    .section-block {
-      margin-bottom: 30px;
-    }
-
-    ul {
-      margin: 10px 0 20px 20px;
-      padding: 0;
-    }
-
-    li {
-      margin: 6px 0;
-    }
-
-    .card {
-      background: #111122;
-      padding: 15px;
-      margin: 15px 0;
-      border-left: 3px solid #7e22ce;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .card:hover {
-      background: #151530;
-      box-shadow: 0 0 10px #7e22ce;
-    }
-
-    .content {
-      display: none;
-      margin-top: 10px;
-      color: #ddd;
-    }
-
-    a {
-      color: #a855f7;
-      text-decoration: none;
-    }
-
-    footer {
-      padding: 20px;
-      text-align: center;
-      color: #777;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>titus@portfolio:~$</h1>
-</header>
-
-<!-- ABOUT -->
-<section>
-  <h2>> about_me</h2>
-
-  <div class="terminal-line">
-    <span class="prompt">$</span> whoami
-  </div>
-
-  <div class="terminal-line">
-    I'm Titus — focused on cybersecurity, networking, and building practical tools.
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section>
-  <h2>> experience</h2>
-
-  <div class="section-block">
-    <div class="terminal-line">
-      <span class="prompt">$</span> experience --timeline
-    </div>
-
-    <div class="terminal-line">
-      At 16, I began my IT journey with an 8-month placement at Sheffield City Trust.
-    </div>
-
-    <ul>
-      <li>Repairing Ethernet cables and resolving network port issues</li>
-      <li>Managing users and devices using Active Directory and Microsoft Intune</li>
-      <li>Conducting hardware audits and remote troubleshooting via Splashtop</li>
-    </ul>
-
-    <div class="terminal-line">
-      I then moved to West Suffolk Council for a 6-month placement:
-    </div>
-
-    <ul>
-      <li>Hardware repairs (charger ports, screen replacements)</li>
-      <li>Provisioning new user accounts and onboarding setups</li>
-    </ul>
-
-    <div class="terminal-line">
-      I was later offered an IT Apprentice role at BUUK:
-    </div>
-
-    <ul>
-      <li>Incident response (compromised accounts, password resets)</li>
-      <li>Asset management and device lifecycle handling</li>
-      <li>Providing end-user support (remote and on-site)</li>
-      <li>Working within ITIL-based service processes</li>
-    </ul>
-
-    <div class="terminal-line">
-      Focused on building practical, real-world experience across systems, networks, and security.
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
 <section>
   <h2>> projects</h2>
 
+  <!-- MD5 CRACKER -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> md5_hash_cracker.py</div>
+
     <div class="content">
-      <p>Built a clean and user-friendly MD5 hash cracker in Python.</p>
-      <p>Focus on usability + real-world cracking concepts.</p>
-      <p><a href="https://medium.com/@titus06/building-a-clean-user-friendly-md5-hash-cracker-in-python-ba0a2ec7331f" target="_blank">Read Breakdown →</a></p>
+      <p>
+        A Python-based MD5 hash cracker designed with usability and clarity in mind.
+        Demonstrates dictionary attacks and how weak hashing algorithms can be exploited.
+      </p>
+
+      <img src="images/md5.png" class="project-img">
+
+      <p>
+        Built to show how hash cracking works in practice while keeping the tool clean and accessible.
+      </p>
+
+      <a href="https://medium.com/@titus06/building-a-clean-user-friendly-md5-hash-cracker-in-python-ba0a2ec7331f" target="_blank">
+        Read Full Article →
+      </a>
     </div>
   </div>
 
+  <!-- FIREWALL -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> ubuntu_firewall_setup.sh</div>
+
     <div class="content">
-      <p>Configured firewall rules on Ubuntu for system security.</p>
-      <p>Demonstrates real defensive security practices.</p>
-      <p><a href="https://medium.com/@titus06/how-to-set-up-a-firewall-on-ubuntu-and-secure-your-network-943b8dae0e6a" target="_blank">Read Breakdown →</a></p>
+      <p>
+        Practical implementation of firewall rules on Ubuntu to secure a system.
+      </p>
+
+      <img src="images/firewall.png" class="project-img">
+
+      <p>
+        Covers traffic filtering, rule configuration, and real-world defensive setup.
+      </p>
+
+      <a href="https://medium.com/@titus06/how-to-set-up-a-firewall-on-ubuntu-and-secure-your-network-943b8dae0e6a" target="_blank">
+        Read Full Article →
+      </a>
     </div>
   </div>
 
+  <!-- PORT SCANNER -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> port_scanner_nmap.py</div>
+
     <div class="content">
-      <p>Python-based port scanner using Nmap.</p>
-      <p>Shows enumeration techniques used in security.</p>
-      <p><a href="https://medium.com/@titus06/simple-python-based-port-scanner-with-nmap-aafc7ee5ded3" target="_blank">Read Breakdown →</a></p>
+      <p>
+        Python-integrated Nmap scanner to detect open ports and services.
+      </p>
+
+      <img src="images/nmap.png" class="project-img">
+
+      <p>
+        Demonstrates enumeration techniques used in both offensive and defensive security.
+      </p>
+
+      <a href="https://medium.com/@titus06/simple-python-based-port-scanner-with-nmap-aafc7ee5ded3" target="_blank">
+        Read Full Article →
+      </a>
     </div>
   </div>
 
+  <!-- AI ARTICLE -->
   <div class="card" onclick="toggle(this)">
     <div><span class="prompt">$</span> ai_cybersecurity_analysis.md</div>
+
     <div class="content">
-      <p>Analysis of AI’s impact on cybersecurity workflows.</p>
-      <p>Focus on cognitive load and blue team perspective.</p>
-      <p><a href="https://medium.com/@titus06/the-cognitive-load-of-ai-in-cybersecurity-a-blue-team-view-b323535b695f" target="_blank">Read Breakdown →</a></p>
+      <p>
+        Analysis of how AI impacts cybersecurity workflows from a blue team perspective.
+      </p>
+
+      <img src="images/ai.png" class="project-img">
+
+      <p>
+        Focus on cognitive load, decision fatigue, and human + AI interaction.
+      </p>
+
+      <a href="https://medium.com/@titus06/the-cognitive-load-of-ai-in-cybersecurity-a-blue-team-view-b323535b695f" target="_blank">
+        Read Full Article →
+      </a>
     </div>
   </div>
 
 </section>
-
-<footer>
-  titus@portfolio:~$ exit
-</footer>
-
-<script>
-  function toggle(el) {
-    const content = el.querySelector(".content");
-    content.style.display = content.style.display === "block" ? "none" : "block";
-  }
-
-  const sections = document.querySelectorAll("section");
-
-  window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if (top < window.innerHeight - 50) {
-        sec.classList.add("visible");
-      }
-    });
-  });
-
-  window.dispatchEvent(new Event('scroll'));
-</script>
-
-</body>
-</html>
-
-
-
