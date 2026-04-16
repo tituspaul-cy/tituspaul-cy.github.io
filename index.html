@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Titus | Portfolio</title>
+  <title>Titus Paul | Portfolio</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
   <style>
@@ -33,11 +32,18 @@
     section {
       padding: 30px 40px;
       border-bottom: 1px solid #1f1f3a;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     h2 {
       color: #a855f7;
-      margin-bottom: 15px;
     }
 
     .terminal-line {
@@ -53,11 +59,38 @@
       padding: 15px;
       margin: 15px 0;
       border-left: 3px solid #7e22ce;
+      cursor: pointer;
     }
 
     .card:hover {
       background: #151530;
-      transition: 0.2s;
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+      color: #ddd;
+    }
+
+    .typing {
+      border-right: 2px solid #c084fc;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 2s steps(30, end) forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    a {
+      color: #a855f7;
+      text-decoration: none;
     }
 
     footer {
@@ -71,7 +104,7 @@
 <body>
 
 <header>
-  <h1>titus@portfolio:~$</h1>
+  <h1 class="typing">titus@portfolio:~$</h1>
   <div class="subtitle">Cybersecurity • Development • Systems</div>
 </header>
 
@@ -85,31 +118,27 @@
   <div class="terminal-line">
     I'm Titus — interested in cybersecurity, systems, and building things that actually work.
   </div>
-
-  <div class="terminal-line">
-    <span class="prompt">$</span> interests
-  </div>
-
-  <div class="terminal-line">
-    networks • security • low-level systems • web
-  </div>
 </section>
 
 <section>
   <h2>> portfolio</h2>
 
-  <div class="card">
-    <div class="terminal-line">
-      <span class="prompt">$</span> project_1
+  <div class="card" onclick="toggle(this)">
+    <div><span class="prompt">$</span> network_scanner</div>
+    <div class="content">
+      <p>This project scans networks to detect active hosts and open ports.</p>
+      <p>I built it using [language], focusing on efficiency and accuracy.</p>
+      <p><a href="#" target="_blank">View GitHub Repo</a></p>
     </div>
-    <div>Describe your project (e.g. network scanner, tool, website)</div>
   </div>
 
-  <div class="card">
-    <div class="terminal-line">
-      <span class="prompt">$</span> project_2
+  <div class="card" onclick="toggle(this)">
+    <div><span class="prompt">$</span> web_app</div>
+    <div class="content">
+      <p>This is a web application I built with [tech].</p>
+      <p>It includes authentication, backend logic, and deployment.</p>
+      <p><a href="#" target="_blank">View GitHub Repo</a></p>
     </div>
-    <div>Another project here</div>
   </div>
 
 </section>
@@ -123,13 +152,32 @@
 
   <div class="terminal-line">✔ Built and deployed my own website</div>
   <div class="terminal-line">✔ Add your certifications here</div>
-  <div class="terminal-line">✔ Any competitions / projects</div>
-
 </section>
 
 <footer>
   <div>titus@portfolio:~$ exit</div>
 </footer>
 
+<script>
+  // Expand/collapse portfolio items
+  function toggle(element) {
+    const content = element.querySelector(".content");
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+
+  // Fade-in sections on scroll
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 50) {
+        sec.classList.add("visible");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
+
